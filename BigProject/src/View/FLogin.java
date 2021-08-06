@@ -133,7 +133,6 @@ public class FLogin extends JFrame {
 						FLogin login = new FLogin();
 						login.dispose();
 						FMain mFrame = new FMain();
-						Fnd_FunCtion.execute
 					}
 				}
 			});
