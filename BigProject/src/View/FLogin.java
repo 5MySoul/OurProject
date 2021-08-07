@@ -33,7 +33,7 @@ public class FLogin extends JFrame {
 	private JButton btnSignIn;
 	private JCheckBox chckbxRememberMe;
 	
-	ControlAuthentication ctrlAuthen;
+	ControlAuthentication ctrlAuthen = new ControlAuthentication();
 
 	/**
 	 * Launch the application.
@@ -117,9 +117,9 @@ public class FLogin extends JFrame {
 			btnSignIn = new JButton("Sign In");
 			btnSignIn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					String u = txtUserName.getText();
+					String tendn = txtUserName.getText();
 					String pw = pPWord.getText();
-					if (u.isEmpty()){
+					if (tendn.isEmpty()){
 						JOptionPane.showMessageDialog(null, "Please enter your usename and try again!");
 						return;
 					}
@@ -127,12 +127,15 @@ public class FLogin extends JFrame {
 						JOptionPane.showMessageDialog(null, "Please enter your password and try again!");
 						return;
 					}
-					boolean kq = ctrlAuthen.checkAccount(u, pw);
+					boolean kq = ctrlAuthen.checkAccount(tendn, pw);
 					if (kq == true){
 						JOptionPane.showMessageDialog(null, "Login successfully!");
 						FLogin login = new FLogin();
 						login.dispose();
-						FMain mFrame = new FMain();
+						FChuongTrinh ct = new FChuongTrinh();
+						ct.show();
+					} else {
+						JOptionPane.showMessageDialog(null, "Wrong username or password!");
 					}
 				}
 			});

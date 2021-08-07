@@ -3,15 +3,17 @@ package models;
 public class QuyenTruyCap {
 	private String userName, passWord;
 	private int level;
+	
 	public QuyenTruyCap(String userName, String passWord, int level) {
 		super();
 		this.userName = userName;
 		this.passWord = passWord;
 		this.level = level;
 	}
+	
 	public QuyenTruyCap() {
-		super();
 	}
+	
 	public String getUserName() {
 		return userName;
 	}
