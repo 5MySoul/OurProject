@@ -1,8 +1,11 @@
 package models;
 
+import java.util.ArrayList;
+
 public class TacGia {
 	private String maTacGia, tenTacGia;
 	private int namsinh;
+	private ArrayList<ChiTietSach> chiTietSachs = new ArrayList<ChiTietSach>();
 	public TacGia(String maTacGia, String tenTacGia, int namsinh) {
 		super();
 		this.maTacGia = maTacGia;
@@ -11,6 +14,13 @@ public class TacGia {
 	}
 	public TacGia() {
 		super();
+	}
+	
+	public ArrayList<ChiTietSach> getChiTietSachs() {
+		return chiTietSachs;
+	}
+	public void setChiTietSachs(ArrayList<ChiTietSach> chiTietSachs) {
+		this.chiTietSachs = chiTietSachs;
 	}
 	public String getMaTacGia() {
 		return maTacGia;
@@ -55,7 +65,7 @@ public class TacGia {
 	}
 	@Override
 	public String toString() {
-		return "TacGia [tenTacGia=" + tenTacGia + "]";
+		return tenTacGia;
 	}
 	
 

@@ -1,16 +1,16 @@
 package models;
 
-public class ChiTietBao_TapChi {
-	private String matl;
-	private int namPhatHanh;
-	private int kyxb;
-	public ChiTietBao_TapChi(String matl, int namPhatHanh, int kyxb) {
+public class ThongTinBao_TapChi {
+	String matl, tentl;
+	int namph, kyxb;
+	public ThongTinBao_TapChi(String matl, String tentl, int namph, int kyxb) {
 		super();
 		this.matl = matl;
-		this.namPhatHanh = namPhatHanh;
+		this.tentl = tentl;
+		this.namph = namph;
 		this.kyxb = kyxb;
 	}
-	public ChiTietBao_TapChi() {
+	public ThongTinBao_TapChi() {
 		super();
 	}
 	public String getMatl() {
@@ -19,21 +19,23 @@ public class ChiTietBao_TapChi {
 	public void setMatl(String matl) {
 		this.matl = matl;
 	}
-	public int getNamPhatHanh() {
-		return namPhatHanh;
+	public String getTentl() {
+		return tentl;
 	}
-	public void setNamPhatHanh(int namPhatHanh) {
-		this.namPhatHanh = namPhatHanh;
+	public void setTentl(String tentl) {
+		this.tentl = tentl;
+	}
+	public int getNamph() {
+		return namph;
+	}
+	public void setNamph(int namph) {
+		this.namph = namph;
 	}
 	public int getKyxb() {
 		return kyxb;
 	}
 	public void setKyxb(int kyxb) {
 		this.kyxb = kyxb;
-	}
-	@Override
-	public String toString() {
-		return "ChiTietBao_TapChi [matl=" + matl + ", namPhatHanh=" + namPhatHanh + ", kyxb=" + kyxb + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -50,7 +52,7 @@ public class ChiTietBao_TapChi {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ChiTietBao_TapChi other = (ChiTietBao_TapChi) obj;
+		ThongTinBao_TapChi other = (ThongTinBao_TapChi) obj;
 		if (matl == null) {
 			if (other.matl != null)
 				return false;
@@ -58,7 +60,9 @@ public class ChiTietBao_TapChi {
 			return false;
 		return true;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return  tentl;
+	}
 	
 }

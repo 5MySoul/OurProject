@@ -49,7 +49,7 @@ public class LoaiTaiLieu {
 
 	@Override
 	public String toString() {
-		return "LoaiTaiLieu [tenLoaiTL=" + tenLoaiTL + "]";
+		return  tenLoaiTL;
 	}
 
 	@Override

@@ -129,7 +129,7 @@ public class ChiTietSach {
 	}
 	@Override
 	public String toString() {
-		return "ChiTietSach [maSach=" + maSach + "]";
+		return maSach;
 	}
 	
 	
